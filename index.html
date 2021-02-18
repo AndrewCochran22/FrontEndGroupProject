@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
     <link href="dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel='stylesheet' />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js"></script>
+    
 </head>
 <body>
     <nav>
@@ -40,6 +45,8 @@
         </form>
     </div>
 
+    <div id="map"></div>
+
     <!-- SOCIAL MEDIA ICONS -->
     <!-- <ul class="social-icons">
         <li><a href="http://www.facebook.com"><img src='path_to_your_image' /></a></li>
@@ -47,5 +54,20 @@
         <li><a href="http://www.youtube.com"><img src='path_to_your_image' /></a></li>
     </ul> -->
 <script src="./index.js"></script>
+<script src="../leaflet-mapbox-gl.js"></script>
+    <script>
+        var map = L.map('map').setView([29.76328, -95.36327], 15);
+
+        L.marker([29.76328, -95.36327])
+            .bindPopup("Hello <b>Leaflet GL</b>!<br>Whoa, it works!")
+            .addTo(map);
+
+        var gl = L.mapboxGL({
+            accessToken: 'pk.eyJ1IjoianRlc3NlbnNvaG4iLCJhIjoiY2tsYmFjc3BjMzZkeTJ1dDdkZ2V2MGw2OSJ9.2sHkZptFduoI2liDVuNxIQ',
+            // get your own MapTiler token at https://cloud.maptiler.com/ or use MapBox style
+            style: 'https://api.maptiler.com/maps/topo/style.json?key=gbetYLSD5vR8MdtZ88AQ'
+        }).addTo(map);
+
+    </script>
 </body>
 </html>
