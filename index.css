@@ -152,3 +152,15 @@ input {
     height:70px;
     margin-right: 20px;
 } */
+
+#map {
+    
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.leaflet-gl-layer.mapboxgl-map {
+    width: 100%;
+}
