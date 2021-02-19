@@ -1,0 +1,79 @@
+body {
+    background-image: url("./—Pngtree—dancing\ crowd\ silhouette\ material\ design_3631049.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutUsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.one {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.two {
+    margin-right: 20px;
+}
+
+#about-us {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.aboutParagraph {
+    text-align: center;
+}
+
+#team {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.linkedPics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card-img-top {
+    width: 150px;
+    height: 150px;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    text-align: center;
+    color: white;
+    border-style: solid;
+    border-color: #041E42;
+    background-color: #F4911E;
+    margin: 1px;
+    padding: 0px;
+}
+
+a {
+    color: #002D62;
+    text-decoration: none;
+    background-color: #F4911E;
+}
+
+a:hover {
+    background-color: #F4911E;
+    color: white;
+    text-decoration: none;
+}
