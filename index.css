@@ -112,11 +112,10 @@ nav{
 }
 
 /* SEARCH BAR */
-
 form {
     width: 400px;
     margin: auto;
-    margin-top: 250px;
+    /* margin-top: 250px; */
 }
 input {
     padding: 4px 10px;
@@ -181,6 +180,7 @@ input {
     height: 500px;
     width: 500px;
     margin: 0 auto;
+    z-index: -1;
 }
 
 .leaflet-gl-layer.mapboxgl-map {
