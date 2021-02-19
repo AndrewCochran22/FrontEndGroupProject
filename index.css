@@ -131,3 +131,38 @@ input {
     background-color: #1c87c9;
     color: #ffffff;
 }
+
+
+
+/* social icons at bottom */
+/* needs to be inline and sized */
+.social {
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    align-content: center;
+    flex-direction: row;
+
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 2.5rem;
+
+    /* display: table; */
+    text-align: center;
+
+    /* display: inline-block; */
+    
+} 
+
+/* .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+} */
