@@ -134,6 +134,7 @@ input {
 
 
 
+
 /* social icons at bottom */
 /* needs to be inline and sized */
 .social {
@@ -153,3 +154,36 @@ input {
     
     text-align: center;    
 } 
+
+/* SOCIAL MEDIA ICONS */
+
+/* .social-icons {
+    text-align: center;
+    }  
+.social-icons li {
+    display:inline-block;
+    list-style-type:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    }
+.social-icons li a {
+    border-bottom: none;
+    }
+.social-icons li img {
+    width:70px;
+    height:70px;
+    margin-right: 20px;
+} */
+
+#map {
+    
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.leaflet-gl-layer.mapboxgl-map {
+    width: 100%;
+}
+
