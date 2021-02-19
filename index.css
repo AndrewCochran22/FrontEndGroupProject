@@ -150,19 +150,6 @@ input {
     width: 50%;
     height: 2.5rem;
 
-    /* display: table; */
-    text-align: center;
-
-    /* display: inline-block; */
     
+    text-align: center;    
 } 
-
-/* .social a {
-    text-align: center;
-    height: 3rem;
-    width: 3rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 100%;
-    line-height: 3rem;
-    color: rgba(255, 255, 255, 0.3);
-} */
