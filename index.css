@@ -46,7 +46,7 @@ nav{
 
 .logo{
     color: #013677;
-    letter-spacing: 5px;
+    letter-spacing: 3.5px;
     font-size: 20px;
 }
 
@@ -68,7 +68,7 @@ nav{
 .nav-links a{
     color: #013677;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -162,6 +162,7 @@ input {
 }
 .search {
     width: 70%;
+    outline-color: #F59728;
 }
 .submit {
     width: 70px;
@@ -400,5 +401,16 @@ input {
     width: 70px;
     background-color: #1c87c9;
     color: #ffffff;
+    cursor:pointer;
+}
+
+
+.footer-home {
+    color: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+    padding-bottom: 15px;
 }
 
