@@ -273,8 +273,7 @@ input {
 .weather-container {
     color: white;
     margin: 0 auto;
-    
-    
+    text-align: center;
     font-size: medium;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -306,4 +305,8 @@ input {
     width: 70px;
     background-color: #1c87c9;
     color: #ffffff;
+}
+
+#weather-icon {
+    width: 10px;
 }

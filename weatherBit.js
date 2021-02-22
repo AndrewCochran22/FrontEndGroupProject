@@ -1,23 +1,30 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     fetch('https://api.weatherbit.io/v2.0/current?postal_code=77002&key=cf485dfd00024155bafb165b6979663b&units=I')
-//     .then((res) => res.json())
-//     .then((data) => {
-//         console.log(data.data[0].temp);
-//         displayWeather(data.data[0].temp);
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     })
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://api.weatherbit.io/v2.0/current?postal_code=77002&key=cf485dfd00024155bafb165b6979663b&units=I')
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        displayWeather(data.data[0].temp, data.data[0].weather.icon, data.data[0].weather.description);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+});
 
 const weatherContainer = document.querySelector('.weather-container');
 
-function displayWeather(input) {
+function displayWeather(temp, icon, description) {
     const currentTemp = document.createElement('div');
+    const tempIcon = document.createElement('img');
+    const weatherDescription = document.createElement('div');
+    tempIcon.setAttribute('src', `https://www.weatherbit.io/static/img/icons/${icon}.png`)
+    tempIcon.setAttribute("width", 50)
     currentTemp.setAttribute('class', 'current-temp');
-    currentTemp.innerHTML = input;
+    currentTemp.innerHTML = temp + "°F";
+    weatherDescription.innerHTML = description;
     weatherContainer.innerHTML = '';
+    weatherContainer.append(tempIcon);
     weatherContainer.append(currentTemp);
+    weatherContainer.append(weatherDescription);
 }
 
 
