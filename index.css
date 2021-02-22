@@ -14,14 +14,45 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color:#F59728;
+    /* Previous font: */
+    /* font-family: 'Londrina Solid', cursive; */
+    /* Testing out new font: */
+    font-family: 'Mada', sans-serif;
+}
+
+.page-title{
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
     font-family: 'Londrina Solid', cursive;
+    text-align:left;
+
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+.neighborhoods {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+
+    padding-left: 100px;
+    padding-bottom: 50px;
 }
 
 .logo{
     color: #013677;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3.5px;
     font-size: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #013677;
 }
 
 .nav-links{
@@ -37,7 +68,7 @@ nav{
 .nav-links a{
     color: #013677;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -85,6 +116,11 @@ nav{
     .burger{
         display: block;
     }
+
+    
+
+
+
 } 
 
 .nav-active{
@@ -102,6 +138,7 @@ nav{
     }
 }
 
+/* Burger animation: */
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
@@ -112,7 +149,7 @@ nav{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-/* SEARCH BAR */
+/* Search bar: */
 form {
     width: 400px;
     margin: auto;
@@ -125,6 +162,7 @@ input {
 }
 .search {
     width: 70%;
+    outline-color: #F59728;
 }
 .submit {
     width: 70px;
@@ -135,8 +173,12 @@ input {
 
 
 
+
+
+
 /* social icons at bottom */
 /* needs to be inline and sized */
+
 .social {
     
     margin: 0 auto;
@@ -150,10 +192,13 @@ input {
     bottom: 0;
     width: 50%;
     height: 2.5rem;
-
+    z-index: -1;
+    justify-content: space-around;
     
     text-align: center;    
 } 
+
+
 
 /* SOCIAL MEDIA ICONS */
 
@@ -175,14 +220,7 @@ input {
     margin-right: 20px;
 } */
 
-#map {
-    
-    position: relative;
-    height: 500px;
-    width: 500px;
-    margin: 0 auto;
-    z-index: -1;
-}
+
 
 .leaflet-gl-layer.mapboxgl-map {
     width: 100%;
@@ -212,8 +250,9 @@ input {
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
 /* Top Half of card, image. */
+/* debug img transition on cards */
 
-.property-image {
+.heights-image {
     height:6em;
     width:100%;
     padding:1em 2em;
@@ -222,11 +261,38 @@ input {
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+    background-image:url('https://365thingsinhouston.com/wp-content/uploads/2019/03/best-bars-in-the-washington-avenue-arts-district-houston-nightlife-696x407.jpg');
     background-size:cover;
     background-repeat:no-repeat;
 }
 
+.midtown-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://1-aegir0-camdenliving-com45.s3.amazonaws.com/styles/community_gallery_mobile__480px_/s3/community/camden-city-centre-ii/community-gallery/37-camden-city-centre-ii-apartments-midtown-houston-tx-walking-bars-restaurants-parks.jpg?itok=EbTIi2nO&timestamp=1503632429');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.downtown-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://img.theculturetrip.com/450x/smart/wp-content/uploads/2018/03/2039491.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 /* Bottom Card Section */
 
 .property-description {
@@ -240,32 +306,111 @@ input {
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 0.5em 1em;
     text-align:center;
+    font-size: large;
 }
 .property-card:hover .property-description {
     height:0em;
     padding:0px 1em;
 }
-.property-card:hover .property-image {
+.property-card:hover .midtown-image {
+    height:18em;
+}
+
+.property-card:hover .downtown-image {
+    height:18em;
+}
+
+.property-card:hover .heights-image {
     height:18em;
 }
 
 .property-card:hover .property-social-icons {
-    background-color:white;
+    background-color:rgb(255, 255, 255);
 }
 
 .property-card:hover .property-social-icons:hover {
     background-color:blue;
     cursor:pointer;
 }
+
+.main-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 5fr 2.5fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar main aside"
+    "sidebar footer footer";
+}
+
 .weather-container {
     color: white;
     margin: 0 auto;
-    display: flex;
-    padding-left: 60px;
-    padding-top: 40px;
+    
+    
     font-size: medium;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* #page-container {
+    display: flex;
+    position: relative;
+    min-height: 100%;
+}
 
+#content-wrap {
+    
+    padding-bottom: 2.5rem;    /* Footer height */
+/* } */
+
+/* #footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;   
+    align-items: flex-end;         /* Footer height */
+    /* z-index: -1; */
+/* } */
+
+#map {
+    
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    /* z-index: -1; */
+}
+
+/* SEARCH BAR */
+form {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+input {
+    padding: 4px 10px;
+    border: 0;
+    font-size: 16px;
+}
+.search {
+    width: 70%;
+}
+.submit {
+    width: 70px;
+    background-color: #1c87c9;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+
+.footer-home {
+    color: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
 
