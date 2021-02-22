@@ -14,7 +14,10 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color:#F59728;
-    font-family: 'Londrina Solid', cursive;
+    /* Previous font: */
+    /* font-family: 'Londrina Solid', cursive; */
+    /* Testing out new font: */
+    font-family: 'Mada', sans-serif;
 }
 
 .page-title{
@@ -43,9 +46,13 @@ nav{
 
 .logo{
     color: #013677;
-    text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #013677;
 }
 
 .nav-links{
@@ -109,7 +116,11 @@ nav{
     .burger{
         display: block;
     }
+
     
+
+
+
 } 
 
 .nav-active{
@@ -127,6 +138,7 @@ nav{
     }
 }
 
+/* Burger animation: */
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
@@ -137,7 +149,7 @@ nav{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-/* SEARCH BAR */
+/* Search bar: */
 form {
     width: 400px;
     margin: auto;
@@ -161,6 +173,11 @@ input {
 
 
 
+
+
+/* social icons at bottom */
+/* needs to be inline and sized */
+
 .social {
     
     margin: 0 auto;
@@ -180,14 +197,29 @@ input {
     text-align: center;    
 } 
 
-#map {
-    
-    position: relative;
-    height: 500px;
-    width: 500px;
-    margin: 0 auto;
-    z-index: -1;
-}
+
+
+/* SOCIAL MEDIA ICONS */
+
+/* .social-icons {
+    text-align: center;
+    }  
+.social-icons li {
+    display:inline-block;
+    list-style-type:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    }
+.social-icons li a {
+    border-bottom: none;
+    }
+.social-icons li img {
+    width:70px;
+    height:70px;
+    margin-right: 20px;
+} */
+
+
 
 .leaflet-gl-layer.mapboxgl-map {
     width: 100%;
@@ -299,12 +331,23 @@ input {
     background-color:blue;
     cursor:pointer;
 }
+
+.main-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 5fr 2.5fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar main aside"
+    "sidebar footer footer";
+}
+
 .weather-container {
     color: white;
     margin: 0 auto;
-    display: flex;
-    padding-left: 60px;
-    padding-top: 40px;
+    
+    
     font-size: medium;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -329,3 +372,33 @@ input {
     align-items: flex-end;         /* Footer height */
     /* z-index: -1; */
 /* } */
+
+#map {
+    
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    /* z-index: -1; */
+}
+
+/* SEARCH BAR */
+form {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+input {
+    padding: 4px 10px;
+    border: 0;
+    font-size: 16px;
+}
+.search {
+    width: 70%;
+}
+.submit {
+    width: 70px;
+    background-color: #1c87c9;
+    color: #ffffff;
+}
+
