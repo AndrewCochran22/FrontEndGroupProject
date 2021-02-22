@@ -292,6 +292,19 @@ input {
     background-size:cover;
     background-repeat:no-repeat;
 }
+.wbfood-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://items-static.postmates.com/uploads/media/8c0bd0ed-b049-4705-8724-f04ec53d43ee/original.jpg?v=63776514041g');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 /* Bottom Card Section */
 
 .property-description {
@@ -316,6 +329,10 @@ input {
 }
 
 .property-card:hover .downtown-image {
+    height:18em;
+}
+
+.property-card:hover .wbfood-image {
     height:18em;
 }
 
