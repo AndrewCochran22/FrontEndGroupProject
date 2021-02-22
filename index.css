@@ -20,6 +20,30 @@ nav{
     font-family: 'Mada', sans-serif;
 }
 
+.page-title{
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Londrina Solid', cursive;
+    text-align:left;
+
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+.neighborhoods {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
 .logo{
     color: #013677;
     letter-spacing: 3.5px;
@@ -92,9 +116,11 @@ nav{
     .burger{
         display: block;
     }
-    #map {
-        z-index: -1;
-    }
+
+    
+
+
+
 } 
 
 .nav-active{
@@ -145,8 +171,14 @@ input {
 }
 
 
+
+
+
+
+
 /* social icons at bottom */
 /* needs to be inline and sized */
+
 .social {
     
     margin: 0 auto;
@@ -160,10 +192,13 @@ input {
     bottom: 0;
     width: 50%;
     height: 2.5rem;
-
+    z-index: -1;
+    justify-content: space-around;
     
     text-align: center;    
 } 
+
+
 
 /* SOCIAL MEDIA ICONS */
 
@@ -184,6 +219,7 @@ input {
     height:70px;
     margin-right: 20px;
 } */
+
 
 
 .leaflet-gl-layer.mapboxgl-map {
@@ -214,8 +250,9 @@ input {
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
 /* Top Half of card, image. */
+/* debug img transition on cards */
 
-.property-image {
+.heights-image {
     height:6em;
     width:100%;
     padding:1em 2em;
@@ -224,11 +261,38 @@ input {
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+    background-image:url('https://365thingsinhouston.com/wp-content/uploads/2019/03/best-bars-in-the-washington-avenue-arts-district-houston-nightlife-696x407.jpg');
     background-size:cover;
     background-repeat:no-repeat;
 }
 
+.midtown-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://1-aegir0-camdenliving-com45.s3.amazonaws.com/styles/community_gallery_mobile__480px_/s3/community/camden-city-centre-ii/community-gallery/37-camden-city-centre-ii-apartments-midtown-houston-tx-walking-bars-restaurants-parks.jpg?itok=EbTIi2nO&timestamp=1503632429');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.downtown-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://img.theculturetrip.com/450x/smart/wp-content/uploads/2018/03/2039491.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 /* Bottom Card Section */
 
 .property-description {
@@ -242,17 +306,26 @@ input {
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 0.5em 1em;
     text-align:center;
+    font-size: large;
 }
 .property-card:hover .property-description {
     height:0em;
     padding:0px 1em;
 }
-.property-card:hover .property-image {
+.property-card:hover .midtown-image {
+    height:18em;
+}
+
+.property-card:hover .downtown-image {
+    height:18em;
+}
+
+.property-card:hover .heights-image {
     height:18em;
 }
 
 .property-card:hover .property-social-icons {
-    background-color:white;
+    background-color:rgb(255, 255, 255);
 }
 
 .property-card:hover .property-social-icons:hover {
@@ -279,6 +352,27 @@ input {
     font-size: medium;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/* #page-container {
+    display: flex;
+    position: relative;
+    min-height: 100%;
+}
+
+#content-wrap {
+    
+    padding-bottom: 2.5rem;    /* Footer height */
+/* } */
+
+/* #footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;   
+    align-items: flex-end;         /* Footer height */
+    /* z-index: -1; */
+/* } */
 
 #map {
     
@@ -310,6 +404,7 @@ input {
     cursor:pointer;
 }
 
+
 .footer-home {
     color: white;
     display: flex;
@@ -318,3 +413,4 @@ input {
     padding-left: 50px;
     padding-bottom: 15px;
 }
+
