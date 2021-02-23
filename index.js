@@ -22,10 +22,6 @@ const navSlide = () => {
 
 navSlide();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b3d1f5a7422bad7e2a6cd7979f5e23d0306ebff
 const mediaQuery = window.matchMedia('(max-width: 768px)')
 const mapVisual = document.querySelector('#map')
 let burgerIndex = 1;
