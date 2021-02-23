@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
 body{
     background-color: #013677;
 }
@@ -48,6 +53,7 @@ nav{
     color: #013677;
     letter-spacing: 3.5px;
     font-size: 20px;
+    margin: 0;
 }
 
 .logo a {
@@ -58,7 +64,7 @@ nav{
 .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 60%;
 }
 
 .nav-links li{
@@ -88,6 +94,7 @@ nav{
 
 @media screen and (max-width:1024px){
     .nav-links{
+        justify-content: space-around;
         width: 60%;
     }
 }

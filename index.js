@@ -23,8 +23,6 @@ const navSlide = () => {
 navSlide();
 
 
-
-
 const mediaQuery = window.matchMedia('(max-width: 768px)')
 const mapVisual = document.querySelector('#map')
 let burgerIndex = 1;
