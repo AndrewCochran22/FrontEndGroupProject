@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's Good</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
     <link href="dist/hamburgers.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
     <script src="https://kit.fontawesome.com/295fe2b516.js" crossorigin="anonymous"></script>
-
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel='stylesheet' />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js"></script>
-
+    <script src="https://opentripmap.io/js/directory.en.js"></script>
+    
     <!-- Testing out new font: -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mada&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <nav>
         <div class="logo">
-            <a href="./index.html"><h4>WhatsGood</h4></a>
+            <a href="./index.html">
+                <h4>WhatsGood</h4>
+            </a>
         </div>
         <ul class="nav-links">
 
@@ -46,26 +51,36 @@
 
     <div class="main-container">
         <!-- SEARCH BAR -->
-        <div></div>
-        <div class="search-container">
-            <form>
-                <input type="text" name="search" class="search" placeholder="Search..">
-                <input type="submit" name="submit" class="submit" value="Search">
-            </form>
+        <div id="search-container">
+            <div>
+
+                <form id="searchForm">
+                    <input id="textbox" type="text" name="search" class="search" placeholder="Search..">
+                    <input type="submit" name="submit" class="submit" value="Search">
+                </form>
+                <div class="weather-container">Current Temperature: 42.2 Degrees</div>
+            </div>
+            <div class="alert alert-primary" id="info">
+
+            </div>
+
         </div>
-        <div></div>
+        <div class="mb-4" id="search-results">
     
-        <button type="button" class="test-button">Click Me</button>
-    
-    
-        <div id="map"></div>
-        <div class="weather-container">Current Temperature: 42.2 Degrees</div>
-    
+            <div  class="list-group mb-4" id="list"></div>
         
-        <!-- <footer>
+            <button id="next_button" class="btn btn-primary" style="visibility: hidden;">Next</button>
+        </div>
+        
+        <div id="map"></div>
+        <div class="card" style="display: none" id="poi"></div>
+    </div>
+
+
+    <!-- <footer>
             <div class="social"> -->
-                <!-- add fa-"#" for sizing -->
-                <!-- <div href="#"><i class="fab fa-twitter fa-2x"></i></div>        
+    <!-- add fa-"#" for sizing -->
+    <!-- <div href="#"><i class="fab fa-twitter fa-2x"></i></div>        
                 <div href="#"><i class="fab fa-facebook-f fa-2x"></i></div>
                 <div href="#"><i class="fab fa-instagram fa fa-2x"></i></div>
             </div>
@@ -73,27 +88,18 @@
     </div>
 
 
-    
-<script src="./index.js"></script>
-<script src="../leaflet-mapbox-gl.js"></script>
+
+    <script src="./leaflet-mapbox-gl.js"></script>
+    <script src="./index.js"></script>
     <script>
-        var map = L.map('map').setView([29.76328, -95.36327], 15);
 
-        L.marker([29.76328, -95.36327])
-            .bindPopup("Hello <b>Leaflet GL</b>!<br>Whoa, it works!")
-            .addTo(map);
-
-        var gl = L.mapboxGL({
-            accessToken: 'pk.eyJ1IjoianRlc3NlbnNvaG4iLCJhIjoiY2tsYmFjc3BjMzZkeTJ1dDdkZ2V2MGw2OSJ9.2sHkZptFduoI2liDVuNxIQ',
-            // get your own MapTiler token at https://cloud.maptiler.com/ or use MapBox style
-            style: 'https://api.maptiler.com/maps/topo/style.json?key=gbetYLSD5vR8MdtZ88AQ'
-        }).addTo(map);
 
     </script>
-<script src="./weatherBit.js"></script>
+    <script src="./weatherBit.js"></script>
 
-<div class="footer-home">
-    <p>&#169; copyright 2021 don't even think about it</p>
-</div>
+    <div class="footer-home">
+        <p>&#169; copyright 2021 don't even think about it</p>
+    </div>
 </body>
+
 </html>

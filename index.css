@@ -369,6 +369,17 @@ input {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#search-container{
+    grid-area: header;
+}
+
+
+#search-results{
+    grid-area: sidebar; 
+}
+
+
+
 /* #page-container {
     display: flex;
     position: relative;
@@ -397,6 +408,7 @@ input {
     width: 500px;
     margin: 0 auto;
     /* z-index: -1; */
+    grid-area: main;
 }
 
 /* SEARCH BAR */
@@ -433,5 +445,9 @@ input {
 
 #weather-icon {
     width: 10px;
+}
+
+#poi {
+    grid-area: aside;
 }
 
