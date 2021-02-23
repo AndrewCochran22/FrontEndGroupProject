@@ -108,8 +108,10 @@ nav{
         width: 50%;
         transform: translateX(0%); 
         transition: transform 0.5s ease-in;
-        z-index: 1; /* Stay on top */
+        z-index: 100; /* Stay on top */
     }
+    
+    
     .nav-links li{
         opacity: 0;
     }

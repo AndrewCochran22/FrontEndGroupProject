@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://api.weatherbit.io/v2.0/current?postal_code=77002&key=cf485dfd00024155bafb165b6979663b&units=I')
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data);
-        displayWeather(data.data[0].temp, data.data[0].weather.icon, data.data[0].weather.description);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     fetch('https://api.weatherbit.io/v2.0/current?postal_code=77002&key=cf485dfd00024155bafb165b6979663b&units=I')
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log(data);
+//         displayWeather(data.data[0].temp, data.data[0].weather.icon, data.data[0].weather.description);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
+// });
 
 const weatherContainer = document.querySelector('.weather-container');
 
