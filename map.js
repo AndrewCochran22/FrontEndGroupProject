@@ -113,7 +113,7 @@ function onShowPOI(data) {
     const position = new L.LatLng(data.point.lat, data.point.lon)
     marker.setLatLng(position)
     let poi = document.getElementById("poi");
-    map.flyTo(position, 20)
+    map.flyTo(position, 18)
     poi.innerHTML = "";
     poi.style.display = "block";
     if (data.preview) {
