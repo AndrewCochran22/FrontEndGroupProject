@@ -192,7 +192,7 @@ if (mediaQuery.matches) {
         if (burgerIndex%2 == 0){
             mapVisual.style.zIndex = "-1";
         } else if (burgerIndex%2 !=0){
-                mapVisual.style.zIndex = "0";
+                mapVisual.style.zIndex = "100";
         }
     })
     }
