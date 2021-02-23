@@ -197,31 +197,6 @@ input {
     text-align: center;    
 } 
 
-<<<<<<< Updated upstream
-
-
-/* SOCIAL MEDIA ICONS */
-
-/* .social-icons {
-    text-align: center;
-    }  
-.social-icons li {
-    display:inline-block;
-    list-style-type:none;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    }
-.social-icons li a {
-    border-bottom: none;
-    }
-.social-icons li img {
-    width:70px;
-    height:70px;
-    margin-right: 20px;
-} */
-
-=======
->>>>>>> Stashed changes
 
 
 .leaflet-gl-layer.mapboxgl-map {
