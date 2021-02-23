@@ -1,5 +1,5 @@
 console.log('Me')
-var map = L.map('map').setView([29.76328, -95.36327], 15);
+var map = L.map('map').setView([29.76328, -95.36327], 10);
 
 const marker = L.marker([29.76328, -95.36327])
     .bindPopup("Hello <b>Leaflet GL</b>!<br>Whoa, it works!")
