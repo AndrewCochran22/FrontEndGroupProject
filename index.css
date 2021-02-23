@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
 body{
     background-color: #013677;
 }
@@ -48,6 +53,7 @@ nav{
     color: #013677;
     letter-spacing: 3.5px;
     font-size: 20px;
+    margin: 0;
 }
 
 .logo a {
