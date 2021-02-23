@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 
-ul {
+h4 {
     margin-bottom: 0;
-    padding-left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    /* font-weight: 0; */
+}
+
+ul {
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
 }
 
 body{
