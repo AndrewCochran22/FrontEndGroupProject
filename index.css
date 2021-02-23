@@ -116,11 +116,6 @@ nav{
     .burger{
         display: block;
     }
-
-    
-
-
-
 } 
 
 .nav-active{
@@ -172,8 +167,15 @@ input {
 
 
 
-
-
+/* Homepage parallax section: */
+.parallax-section-2{
+    background-image: url(./houston_skyline.jpg);
+    height: 575px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /* social icons at bottom */
@@ -376,8 +378,8 @@ input {
 #map {
     
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: 465px;
+    width: 465px;
     margin: 0 auto;
     /* z-index: -1; */
 }
@@ -409,8 +411,9 @@ input {
     display: flex;
     align-items: center;
     align-content: center;
-    padding-left: 50px;
+    padding-left: 35px;
     padding-bottom: 15px;
+    padding-top: 20px;
 }
 
 
