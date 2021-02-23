@@ -36,7 +36,7 @@ navSlide();
 //   setTimeout(showSlides, 5000); // Change image every 2 seconds
 // }
 
-var map = L.map('map').setView([29.76328, -95.36327], 15);
+var map = L.map('map').setView([29.76328, -95.36327], 10);
 
         const marker = L.marker([29.76328, -95.36327])
             .bindPopup("Hello <b>Leaflet GL</b>!<br>Whoa, it works!")
