@@ -138,31 +138,5 @@ document
 
 
 //You should get your API key at https://opentripmap.io
-const apiKey = "5ae2e3f221c38a28845f05b65dd2790a52fc2733b330536191c638d0";
+// const apiKey = "5ae2e3f221c38a28845f05b65dd2790a52fc2733b330536191c638d0";
 
-function apiGet(method, query) {
-    return new Promise(function (resolve, reject) {
-        var otmAPI =
-            "https://api.opentripmap.com/0.1/en/places/" +
-            method +
-            "?apikey=" +
-            apiKey;
-        if (query !== undefined) {
-            otmAPI += "&" + query;
-        }
-        fetch(otmAPI)
-            .then(response => response.json())
-            .then(data => resolve(data))
-            .catch(function (err) {
-                console.log("Fetch Error :-S", err);
-            });
-    });
-}
-
-const pageLength = 5; // number of objects per page
-
-let lon; // place longitude
-let lat; // place latitude
-
-let offset = 0; // offset from first object in the list
-let count; // total objects count
