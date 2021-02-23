@@ -108,19 +108,16 @@ nav{
         width: 50%;
         transform: translateX(0%); 
         transition: transform 0.5s ease-in;
-        z-index: 1; /* Stay on top */
+        z-index: 100; /* Stay on top */
     }
+    
+    
     .nav-links li{
         opacity: 0;
     }
     .burger{
         display: block;
     }
-
-    
-
-
-
 } 
 
 .nav-active{
@@ -172,8 +169,15 @@ input {
 
 
 
-
-
+/* Homepage parallax section: */
+.parallax-section-2{
+    background-image: url(./houston_skyline.jpg);
+    height: 575px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /* social icons at bottom */
@@ -261,7 +265,7 @@ input {
     -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-image:url('https://365thingsinhouston.com/wp-content/uploads/2019/03/best-bars-in-the-washington-avenue-arts-district-houston-nightlife-696x407.jpg');
+    background-image:url('https://365thingsinhouston.com/wp-content/uploads/2019/03/best-bars-in-the-washington-avenue-arts-district-houston-nightlife-696x407.jpg');    
     background-size:cover;
     background-repeat:no-repeat;
 }
@@ -306,6 +310,34 @@ input {
     background-size:cover;
     background-repeat:no-repeat;
 }
+
+.jusmac-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://res.cloudinary.com/sagacity/image/upload/c_crop,h_806,w_1084,x_0,y_459/c_scale,w_1080/v1424031762/0215-comfort-food-mac-n-cheese-liberty-kitchen_sq8xot.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.cnb-image {
+    height:6em;
+    width:100%;
+    padding:1em 2em;
+    position:Absolute;
+    top:0px;
+    -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-image:url('https://www.houstonguide.net/wp-content/uploads/2020/04/Screen-Shot-2020-04-04-at-11.28.59-AM-e1586022114823.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
 /* Bottom Card Section */
 
 .property-description {
@@ -341,6 +373,14 @@ input {
     height:18em;
 }
 
+.property-card:hover .jusmac-image {
+    height:18em;
+}
+
+.property-card:hover .cnb-image {
+    height:18em;
+}
+
 .property-card:hover .property-social-icons {
     background-color:rgb(255, 255, 255);
 }
@@ -369,6 +409,7 @@ input {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 #search-container{
     grid-area: header;
 }
@@ -387,25 +428,33 @@ input {
 }
 
 #content-wrap {
+
+/* #page-container { */
     
-    padding-bottom: 2.5rem;    /* Footer height */
+    /* position: relative;
+    min-height: 100%; */
 /* } */
 
-/* #footer {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;   
-    align-items: flex-end;         /* Footer height */
+/* #content-wrap {
+    
+   /* padding-bottom: 2.5rem;    Footer height */
+/* }  */
+
+/* #footer { 
+    /* display: flex; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* height: 2.5rem;  */
+    /*align-items: center;         /*Footer height*/
     /* z-index: -1; */
 /* } */
 
 #map {
     
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: 465px;
+    width: 465px;
     margin: 0 auto;
     /* z-index: -1; */
     grid-area: main;
@@ -438,8 +487,9 @@ input {
     display: flex;
     align-items: center;
     align-content: center;
-    padding-left: 50px;
+    padding-left: 35px;
     padding-bottom: 15px;
+    padding-top: 20px;
 }
 
 
