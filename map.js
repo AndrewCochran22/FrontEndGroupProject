@@ -1,3 +1,4 @@
+console.log('Me')
 var map = L.map('map').setView([29.76328, -95.36327], 15);
 
 const marker = L.marker([29.76328, -95.36327])
@@ -14,6 +15,8 @@ var gl = L.mapboxGL({
 
 let searchForm = document.querySelector("#searchForm")
 searchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log('searching')
     let name = document.querySelector("#textbox").value;
     apiGet("geoname", "name=" + name).then(function (data) {
         let message = "Name not found";
@@ -25,8 +28,36 @@ searchForm.addEventListener("submit", function (event) {
         }
         document.getElementById("info").innerHTML = `${message}`;
     });
-    event.preventDefault();
 });
+
+const apiKey = "5ae2e3f221c38a28845f05b65dd2790a52fc2733b330536191c638d0";
+function apiGet(method, query) {
+    return new Promise(function (resolve, reject) {
+        var otmAPI =
+            "https://api.opentripmap.com/0.1/en/places/" +
+            method +
+            "?apikey=" +
+            apiKey;
+        if (query !== undefined) {
+            otmAPI += "&" + query;
+        }
+        fetch(otmAPI)
+            .then(response => response.json())
+            .then(data => resolve(data))
+            .catch(function (err) {
+                console.log("Fetch Error :-S", err);
+            });
+    });
+}
+
+const pageLength = 5; // number of objects per page
+
+let lon; // place longitude
+let lat; // place latitude
+
+let offset = 0; // offset from first object in the list
+let count; // total objects count
+
 
 function firstLoad() {
     apiGet(
